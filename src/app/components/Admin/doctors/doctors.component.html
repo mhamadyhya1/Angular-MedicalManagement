@@ -1,0 +1,202 @@
+<div class="container-xl">
+<div class="table-responsive">
+<div class="table-wrapper">
+    <div class="table-title">
+        <div class="row">
+            <div class="text-center">
+                <h2>Manage <b>Doctors</b></h2>
+            </div>
+            <div class="col-sm-6 text-center">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    User Login
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <form>
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Add Doctor</h4>
+                                    <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Specialist</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Image">Profile Picture</label>
+                                        <input type="file" class="form-control-file" name="" id="" placeholder=""
+                                            aria-describedby="fileHelpId">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Days</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Start Hour</label>
+                                        <input type="time" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>End Hour</label>
+                                        <input type="time" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Time Interval</label>
+                                        <input type="number" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Phone Number</label>
+                                        <input type="number" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Username</label>
+                                        <input type="username" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input type="Password" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Confirm Password</label>
+                                        <input type="Password" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Date Of Birth</label>
+                                        <input type="date" class="form-control" required>
+                                    </div>
+
+
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                    <input type="submit" class="btn btn-success" value="Add">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+
+                <th>Profile</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Specialist</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+                <td><img src="https://mdbootstrap.com/img/new/avatars/7.jpg" class="rounded-circle" alt=""
+                        style="width: 45px; height: 45px" /></td>
+                <td>Thomas Hardy</td>
+                <td>thomashardy@mail.com</td>
+                <td>Dermatologists</td>
+
+                <td>
+                    <a class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip"
+                            title="Edit">&#xE254;</i></a>
+                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
+                            data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                </td>
+            </tr>
+            <tr>
+
+                <td>
+                    <img src="https://i.pravatar.cc/200" class="rounded-circle" alt=""
+                        style="width: 45px; height: 45px" />
+                </td>
+                <td>Dominique Perrier</td>
+                <td>dominiqueperrier@mail.com</td>
+                <td>Dermatologists</td>
+
+                <td>
+                    <a href="#" class="view" title="View" data-toggle="tooltip"><i
+                            class="material-icons">&#xE417;</i></a>
+
+                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
+                            data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
+                            data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                </td>
+            </tr>
+            <tr>
+
+                <td>
+
+                    <img src="https://i.pravatar.cc/250" class="rounded-circle" alt=""
+                        style="width: 45px; height: 45px" />
+
+                </td>
+
+                <td>Maria Anders</td>
+                <td>mariaanders@mail.com</td>
+                <td>Dermatologists</td>
+
+                <td>
+                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
+                            data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
+                            data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                </td>
+            </tr>
+            <tr>
+
+                <td>
+
+                    <img src="https://i.pravatar.cc/230" class="rounded-circle" alt=""
+                        style="width: 45px; height: 45px" />
+
+                </td>
+
+                <td>Fran Wilson</td>
+                <td>franwilson@mail.com</td>
+                <td>Dermatologists</td>
+
+                <td>
+                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
+                            data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
+                            data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                </td>
+            </tr>
+            <tr>
+
+
+                <td>
+
+                    <img src="https://i.pravatar.cc/210" class="rounded-circle" alt=""
+                        style="width: 45px; height: 45px" />
+
+                </td>
+                <td>Martin Blank</td>
+                <td>martinblank@mail.com</td>
+                <td>Dermatologists</td>
+
+                <td>
+                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
+                            data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons"
+                            data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+</div>
+</div>
+
