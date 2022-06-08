@@ -6,10 +6,13 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AddComponent } from './announcements/add/add.component';
 import { AnnouncementsComponent } from './announcements/announcements.component';
 import { ViewComponent } from './announcements/view/view.component';
-import { AddModalComponent } from './doctors/add-modal/add-modal.component';
+import { AddDoctorComponent } from './doctors/add-doctor/add-doctor.component';
+import { AddSpecialistComponent } from './doctors/add-specialist/add-specialist.component';
+import { DoctorViewComponent } from './doctors/doctor-view/doctor-view.component';
 import { DoctorsComponent } from './doctors/doctors.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { PatientsComponent } from './patients/patients.component';
+
 
 const routes: Routes = [
   {path:'',component:AdminDashboardComponent,
@@ -17,9 +20,11 @@ children:[
   {path:'home',component:AdminHomeComponent},
   {path:'patient',component:PatientsComponent},
   {path:'doctors',component:DoctorsComponent,
-   children:[
-    {path:'add',component:AddModalComponent},
-   ]
+  children:[
+    {path:'',component:DoctorViewComponent},
+    {path:'AddDoctor',component:AddDoctorComponent},
+    {path:'AddSpecialist' , component:AddSpecialistComponent},
+  ],
 },
   {path:'employees',component:EmployeesComponent},
   {path:'announcements',component:AnnouncementsComponent,

@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="text-center">
+        <h2>Add Doctor</h2>
+    </div>
+    <div class="row">
+      <div class="form">
+        <form id="contact-form" role="form" enctype="multipart/form-data">
+          <div class="form-group form-group-lg">
+            <label>Full Name</label>
+            <input type="text" name="Fullname" id="" class="form-control" placeholder="" [(ngModel)]="Fullname" [ngModelOptions]="{standalone:true}">
+          </div>
+          <h4>Specialists</h4>
+          <div class="form-group">
+             <select id="UserSelector" styl e="width: 50%;" (change)="onChange($event.target.value)">
+              <option *ngFor="let Specialist of Specialists" value={{Specialist.Name}}>{{Specialist.Name}}</option>
+            </select>
+          </div>
+         <div class="form-group">
+            <label class="custom-file">
+              <input type="file" name="" id="" placeholder="Upload Image" class="custom-file-input" (change)="onFileChanged($event)" aria-describedby="fileHelpId">
+              <span class="custom-file-control"></span>
+            </label>
+            <small id="fileHelpId" class="form-text text-muted text-dark">Upload Image</small>
+          </div>
+          <h4>Days</h4>
+          <div class="form-group">
+              <select id="UserSelector" style="width: 50%;" (change)="onChangeDay($event.target.value)">
+              <option *ngFor="let day of days" value={{day.name}}>{{day.name}}</option>
+          </select>
+           
+          </div>
+          <button (click)="addDay()">Add</button>
+          <div class="form-group">
+            <label>Start Hour</label>
+            <input type="time" class="form-control"  [(ngModel)]="startTime" [ngModelOptions]="{standalone:true}">
+          </div>
+          <div class="form-group">
+            <label>End Hour</label>
+            <input type="time" class="form-control"  [(ngModel)]="endTime" [ngModelOptions]="{standalone:true}">
+          </div>
+          <div class="form-group">
+            <label>Time Interval (minute)</label>
+            <input type="number" class="form-control"  [(ngModel)]="timeInterval" [ngModelOptions]="{standalone:true}">
+          </div>
+          <div class="form-group">
+            <label>Year Experience</label>
+            <input type="number" class="form-control"  [(ngModel)]="yearExperience" [ngModelOptions]="{standalone:true}">
+          </div>
+          <div class="Upload">
+            <button type="button" class="btn btn-primary" (click)="create()">Upload</button>
+          </div>
+    
+        </form>
+      </div>
+    </div>
+</div>

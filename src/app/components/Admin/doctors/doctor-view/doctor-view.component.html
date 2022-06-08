@@ -1,0 +1,56 @@
+
+<div class="container-xl">
+    <div class="table-responsive">
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="text-center">
+                    <h2>Manage <b>Doctors</b></h2>
+                </div>
+                <div class="text-left">
+                    <div class="actionsbuttons">
+                        <button type="button" class="btn btn-primary" [routerLink]="['AddDoctor']">Add Doctor</button>
+                        <button type="button" class="btn btn-primary" style="margin-left: 12px;" [routerLink]="['AddSpecialist']">Add Specialist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+    
+                    <th>Profile</th>
+                    <th>Name</th>
+                    <th>Specialist</th>
+                    <th>Time Attend</th>
+                    <th>Day Attend</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let d of Doctor">
+                    <td>
+                        <img src="{{d.imageUrl}}" class="rounded-circle" alt=""
+                            style="width: 45px; height: 45px" />
+                    </td>
+                    <td>{{d.Fullname}}</td>
+                    <td>{{d.Specialist}}</td>
+                    <td>{{d.startTime}}-{{d.endTime}}</td>
+                    <td>{{d.days}}</td>
+    
+                    <td>
+                        <a href="#" class="view" title="View" data-toggle="tooltip"><i
+                                class="material-icons">&#xE417;</i></a>
+    
+                        <a><i class="material-icons" title="Edit">&#xE254;</i></a>
+                        <i class="material-icons" (click)="delete()" style ="color:blue" title="Delete">&#xE872;</i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    
+    </div>
+    </div>
+    </div>
+    
+    

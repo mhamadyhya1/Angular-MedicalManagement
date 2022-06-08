@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgbModal,ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import { AddModalComponent } from './add-modal/add-modal.component';
 
 @Component({
   selector: 'app-doctors',
