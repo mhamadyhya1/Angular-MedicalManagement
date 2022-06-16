@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AdminDataService, Specialist } from '../../admin-data.service';
+import { DoctorViewComponent } from '../doctor-view/doctor-view.component';
 
 @Component({
   selector: 'app-add-doctor',
@@ -77,7 +78,6 @@ export class AddDoctorComponent implements OnInit {
     })
       this.toastr.success("Doctor added successful")
       this.router.navigate(['admin/doctors/'])
-      
     }
     catch (error){
       console.log(error)

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
-import {HttpClient} from '@angular/common/http'
+import {HttpClient, HttpHeaders} from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { Time } from '@angular/common';
 
@@ -8,7 +8,7 @@ import { Time } from '@angular/common';
   providedIn: 'root'
 })
 export class AdminDataService {
-   url='http://192.168.0.104:3900/api';
+   url='http://192.168.1.106:3900/api';
    apiUrl=''
 
    selectedFile:File;
@@ -45,6 +45,22 @@ export class AdminDataService {
   getAllDoctors():Observable<Doctor[]>{
     this.apiUrl=this.url+'/Doctor/getAllDoctors'
     return this.http.get<Doctor[]>(this.apiUrl)
+  } 
+  getAllAnnouncements():Observable<Announcement[]>{
+    this.apiUrl=this.url+'/Announcement/getAllAnnouncements'
+    return this.http.get<Announcement[]>(this.apiUrl)
+  }
+  deleteDoctor(dr:Doctor){
+    this.apiUrl = this.url+'/Doctor/deleteDoctor/'+dr._id;
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const options = { headers: headers };
+    return this.http.post(this.apiUrl,JSON.stringify(dr),options)
+  }
+  deleteAnnouncement(ar:Announcement){
+    this.apiUrl = this.url+'/Announcement/delete/'+ar._id;
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const options = { headers: headers };
+    return this.http.post(this.apiUrl,JSON.stringify(ar),options)
   }
 }
 
@@ -53,8 +69,9 @@ export class Announcement{
   _id:string;
   Title:string;
   Details:string;
-  image:{path:string}
+  imageUrl:string
 }
+
 export class Specialist{
   _id:string;
   Name:string;

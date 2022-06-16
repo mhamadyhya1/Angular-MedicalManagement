@@ -6,23 +6,14 @@
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link" routerLinkActive="active" aria-expanded="false" routerLink="./doctors">Doctors</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link"  routerLinkActive="active" aria-haspopup="true" aria-expanded="false" routerLink="./patient">Patients</a>
-            </li>
-            
             <li class="nav-item active">
                 <a class="nav-link" routerLinkActive="active" routerLink="./announcements" href="#">Announcement</a>
             </li>
-
-
-
         </ul>
+        <button type="button" class=" text-right btn btn-danger" (click)="logout()">Log Out</button>
 
     </div>
 </nav>

@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddDoctorComponent } from './doctors/add-doctor/add-doctor.component';
 import { DoctorViewComponent } from './doctors/doctor-view/doctor-view.component';
 import { AddSpecialistComponent } from './doctors/add-specialist/add-specialist.component';
+import { ViewSpecialistComponent } from './doctors/view-specialist/view-specialist.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { AddSpecialistComponent } from './doctors/add-specialist/add-specialist.
     AddComponent,
     AddDoctorComponent,
     DoctorViewComponent,
-    AddSpecialistComponent
+    AddSpecialistComponent,
+    ViewSpecialistComponent
   ],
   imports: [
     HttpClientModule,

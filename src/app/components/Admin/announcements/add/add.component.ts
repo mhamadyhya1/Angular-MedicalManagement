@@ -4,6 +4,7 @@ import { of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { AdminDataService } from '../../admin-data.service';
 import { Alert } from 'bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add',
@@ -18,7 +19,7 @@ export class AddComponent implements OnInit {
   image: any;
   
 
-  constructor(private asv : AdminDataService) { }
+  constructor(private asv : AdminDataService, private router : Router) { }
 
   ngOnInit(): void {
   }
@@ -42,6 +43,7 @@ export class AddComponent implements OnInit {
     this.asv.addAnnouncment(announcement).subscribe(data=>{
       alert(JSON.stringify(data))
     })
+    this.router.navigate(['admin/announcements/'])
   }
 }
 

@@ -10,6 +10,7 @@ import { AddDoctorComponent } from './doctors/add-doctor/add-doctor.component';
 import { AddSpecialistComponent } from './doctors/add-specialist/add-specialist.component';
 import { DoctorViewComponent } from './doctors/doctor-view/doctor-view.component';
 import { DoctorsComponent } from './doctors/doctors.component';
+import { ViewSpecialistComponent } from './doctors/view-specialist/view-specialist.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { PatientsComponent } from './patients/patients.component';
 
@@ -24,6 +25,7 @@ children:[
     {path:'',component:DoctorViewComponent},
     {path:'AddDoctor',component:AddDoctorComponent},
     {path:'AddSpecialist' , component:AddSpecialistComponent},
+    {path:'ViewSpecialist' , component:ViewSpecialistComponent},
   ],
 },
   {path:'employees',component:EmployeesComponent},

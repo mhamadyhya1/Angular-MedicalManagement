@@ -11,6 +11,7 @@
                     <div class="actionsbuttons">
                         <button type="button" class="btn btn-primary" [routerLink]="['AddDoctor']">Add Doctor</button>
                         <button type="button" class="btn btn-primary" style="margin-left: 12px;" [routerLink]="['AddSpecialist']">Add Specialist</button>
+                        <button type="button" class="btn btn-primary" style="margin-left: 12px;" [routerLink]="['ViewSpecialist']">View Specialists</button>
                     </div>
                 </div>
             </div>
@@ -43,7 +44,7 @@
                                 class="material-icons">&#xE417;</i></a>
     
                         <a><i class="material-icons" title="Edit">&#xE254;</i></a>
-                        <i class="material-icons" (click)="delete()" style ="color:blue" title="Delete">&#xE872;</i>
+                        <i class="material-icons" (click)="DeleteDoctor(d)" style ="color:blue" title="Delete">&#xE872;</i>
                     </td>
                 </tr>
             </tbody>

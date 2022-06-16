@@ -1,5 +1,21 @@
-#Body{
-    margin: 0;
-    padding: 0;
-    background-color: #325ea4;
+*{
+    
+    max-width: 500px;
+    margin: auto;
+    
+}
+
+.title{
+    top: 25px;
+}
+.form-group{
+    margin-top: 45px;
+    
+}
+.form-control{
+    background-color:aliceblue
+}
+.Upload{
+    margin-top: 25px;
+    text-align: center;
 }
