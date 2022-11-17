@@ -9,9 +9,7 @@ phases:
      runtime-versions:
         nodejs: 16
    commands:
-        - echo Installing source NPM dependencies...
         - npm install
-        - прп install -g @angular/cl1
    build:
      commands:
         - echo Build started
