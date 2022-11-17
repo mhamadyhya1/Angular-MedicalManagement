@@ -1,14 +1,14 @@
 version: 0.2
- env:
-    variables:
-        CACHE_CONTROL: "86400"
-        S3_BUCKET:"{{s3_bucket_url}}"
-        BUILD_FOLDER: "dist"
+env:
+   variables:
+      CACHE_CONTROL: "86400"
+      S3_BUCKET: "{{s3_bucket_url}}"
+      BUILD_FOLDER: "dist"
 phases:
    install:
      runtime-versionst
         nodejs: 14
-     commands:
+   commands:
         - echo Installing source NPM dependencies...
         - npm install
         - прп install -g @angular/cl1
@@ -16,7 +16,7 @@ phases:
      commands:
         - echo Build started
         - ng build
- artifacts:
+artifacts:
      files:
         -'ns/s'
      base-directory: 'distr'
