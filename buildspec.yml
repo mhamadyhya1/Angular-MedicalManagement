@@ -6,8 +6,8 @@ env:
       BUILD_FOLDER: "dist"
 phases:
    install:
-     runtime-versionst
-        nodejs: 14
+     runtime-versions:
+        nodejs: 16
    commands:
         - echo Installing source NPM dependencies...
         - npm install
