@@ -18,6 +18,6 @@ phases:
         - ng build
 artifacts:
      files:
-        -'ns/s'
-     base-directory: 'distr'
+        -'**/*'
+     base-directory: 'dist*'
      discard-paths: yes
