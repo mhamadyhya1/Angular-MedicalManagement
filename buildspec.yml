@@ -1,0 +1,23 @@
+version: 0.2
+ env:
+    variables:
+        CACHE_CONTROL: "864001
+        53_BUCKET: "((s3_bucket_ur())**
+        BUILD_FOLDER: "dist"
+phases:
+   install:
+     runtime-versionst
+        nodejs: 14
+     commands:
+        - echo Installing source NPM dependencies...
+        - npm install
+        - прп install -g @angular/cl1
+   build:
+     commands:
+        - echo Build started
+        - ng build
+ artifacts:
+     files:
+        -'ns/s'
+     base-directory: 'distr'
+     discard-paths: yes
