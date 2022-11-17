@@ -9,7 +9,7 @@ phases:
      runtime-versions:
         nodejs: 16
    pre_build:
-   commands:
+      commands:
         - echo Installing source NPM dependencies...
         - npm install
    build:
